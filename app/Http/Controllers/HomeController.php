@@ -41,10 +41,14 @@ class HomeController extends Controller
     {
         return view('contact');
     }
-
-     public function project()
+    public function project()
     {
         return view('work');
+    }
+    public function skillExpert(Request $request)
+    {
+        
+        return view('contact');
     }
 
 }

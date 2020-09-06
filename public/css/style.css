@@ -1253,3 +1253,19 @@ body.offcanvas {
     height: inherit !important;
     float: left;
     padding-top: 30px; } }
+
+
+
+
+
+
+
+
+
+
+.hire-form{
+  margin-bottom: 100px;
+}
+.hire-form .colorlib-heading{
+  margin-bottom: 2em!important
+}

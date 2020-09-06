@@ -23,10 +23,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/project', 'HomeController@project')->name('project');
 Route::get('/services', 'HomeController@services')->name('services');
-//Route::get('/blog', 'HomeController@blog')->name('blog');
 Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::get('/skillexpert/{id}','HomeController@skillExpert');
 
 Route::resource('skill', 'SkillsController');
+Route::resource('hire', 'HireController');
+Route::resource('freelancer_job', 'FreelancerjobsController');
+
 
 
 

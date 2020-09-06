@@ -60,7 +60,7 @@
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                          @if (Route::has('login'))
                             @if (Auth::check())
-                              {{ Auth::user()->name }}
+                              {{ Auth::user()->fname }} 
                             @endif
                         @endif
                         </a>
@@ -70,8 +70,8 @@
                     <li><a href="{{ route('about') }}">How it's Work</a></li>
                     <li><a href="{{ route('skill.index') }}">Freelancer Skill</a></li>
                     <li><a href="{{ route('services') }}">Services</a></li>
-                    <li><a href="{{ route('services') }}">Hire Freelancer</a></li>
-                    <li><a href="{{ route('services') }}">Freelancer Job</a></li>
+                    <li><a href="{{ route('hire.index') }}">Hire Freelancer</a></li>
+                    <li><a href="{{ route('freelancer_job.index') }}">Freelancer Job</a></li>
                     <li><a href="{{ route('contact') }}">Contact</a></li>
                        @guest
                             <li class="nav-item">

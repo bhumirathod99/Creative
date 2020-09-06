@@ -69,14 +69,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     { 
 
-        $request = app('request');
-        if($request->hasfile('image')){
-            $avatar = $request->file('image');
-            $filename = time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($image)->resize(300, 300)->save( public_path('/storage/app/public' . $filename) );
-        }
-
-        return User::create([
+        $user= User::create([
             'fname' => $data['fname'],
              'lname' => $data['lname'],
             'email' => $data['email'],
@@ -85,5 +78,13 @@ class RegisterController extends Controller
             'address' => $data['address'],
             'image' => $data['image']
         ]);
+
+
+        if(request()->hasFile(['image'])){
+            $image=request()->file(['image'])->getClientOriginalName();
+            request()->file(['image'])->storeAs(path:'image',name: $user->id.'/'.$image,option:'');
+            $user->upload(['image'=>$image]);
+        }
+        return $user;
     }
 }
