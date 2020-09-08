@@ -46,9 +46,8 @@ class HomeController extends Controller
         return view('work');
     }
     public function skillExpert(Request $request)
-    {
-        
-        return view('contact');
+    {   
+        return view('skillFreelancer');
     }
 
 }

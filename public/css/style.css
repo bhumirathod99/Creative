@@ -1252,7 +1252,8 @@ body.offcanvas {
     clear: both;
     height: inherit !important;
     float: left;
-    padding-top: 30px; } }
+    padding-top: 30px; } 
+  }
 
 
 
@@ -1267,5 +1268,28 @@ body.offcanvas {
   margin-bottom: 100px;
 }
 .hire-form .colorlib-heading{
-  margin-bottom: 2em!important
+  margin-bottom: 2em!important;
+}
+
+#active_sub1{
+  display: none;
+}
+
+#active_sub2{
+  display: none;
+}
+
+#active_sub3{
+  display: none;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
 }

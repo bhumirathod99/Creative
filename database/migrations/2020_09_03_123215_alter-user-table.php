@@ -34,3 +34,7 @@ class AlterUserTable extends Migration
         });
     }
 }
+
+
+
+//php artisan make:migration add_paid_to_users_table --table=users
